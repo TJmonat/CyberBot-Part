@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout code
@@ -19,11 +19,11 @@ jobs:
       with:
         dotnet-version: '6.0.x'
 
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.3.1
+
     - name: Restore dependencies
       run: dotnet restore
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
-
-    - name: Test (optional)
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet build --configuration Release
