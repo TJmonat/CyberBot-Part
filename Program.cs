@@ -204,8 +204,7 @@ to protect networks.
                 input = Console.ReadLine().ToLower();
                 if (string.IsNullOrEmpty(input))//this if statement will check if the user left an empty space if yes the error sound will play
                 {
-                    SoundPlayer errorSound= new SoundPlayer("\"C:\\Users\\tsheg\\source\\repos\\CyberBot Part 1\\Test2\\Sounds\\errorSound.wav\"");
-                    errorSound.Play();
+                    
                 }
             }
         }
